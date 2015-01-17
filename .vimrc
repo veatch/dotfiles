@@ -1,16 +1,20 @@
+" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" vim +PluginInstall +qall
 " required by vundle
 set nocompatible
 filetype off
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/vundle'
 Plugin 'alfredodeza/khuno.vim'
 Plugin 'tpope/vim-surround'
 "Plugin 'klen/python-mode'
+
+call vundle#end()
 
 let g:khuno_max_line_length=120
 let g:khuno_ignore="E128"
