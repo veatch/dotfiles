@@ -1,19 +1,16 @@
-" git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-" vim +PluginInstall +qall
 " required by vundle
 set nocompatible
+filetype on
 filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
 
+call vundle#begin()
 " let Vundle manage Vundle, required
-Plugin 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 Plugin 'alfredodeza/khuno.vim'
 Plugin 'tpope/vim-surround'
-"Plugin 'klen/python-mode'
-
 call vundle#end()
 
 let g:khuno_max_line_length=120
@@ -25,6 +22,8 @@ filetype plugin indent on     " required by vundle
 
 " vundle folds by default. start with all open
 set foldlevelstart=20
+
+set guifont=Menlo\ Regular:h13
 
 autocmd BufWritePre *.py :%s/\s\+$//e
 
@@ -40,6 +39,7 @@ set incsearch
 set showmatch
  
 set number
+set ruler
 
 " set working dir to current file
 autocmd BufEnter * silent! lcd %:p:h
@@ -58,3 +58,12 @@ nnoremap <C-t>     :tabnew<CR>
 inoremap <C-S-tab> <Esc>:tabprevious<CR>i
 inoremap <C-tab>   <Esc>:tabnext<CR>i
 inoremap <C-t>     <Esc>:tabnew<CR>
+
+" disable sounds
+set noerrorbells 
+set novisualbell
+set t_vb=
+autocmd! GUIEnter * set vb t_vb=
+
+" Column color at 80 character mark
+set cc=80
