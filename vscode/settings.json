@@ -1,0 +1,12 @@
+{
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=120"
+    ],
+    "editor.rulers": [80, 120],
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Quiet Light",
+    "editor.fontSize": 14,
+    "python.formatting.provider": "black",
+    "window.title": "${activeEditorMedium}${separator}${rootName}"
+}
